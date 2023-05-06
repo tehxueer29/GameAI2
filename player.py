@@ -75,8 +75,8 @@ class Player:
         if is_freight and hunt_distance <= 30:
             reward += 5
             self.isFreight = False
-            print("is_freight" + str(is_freight))
-            print("reward" + str(reward))
+            # print("is_freight" + str(is_freight))
+            # print("reward" + str(reward))
         
         # punish pacman for being near a ghost when not in freight mode
         elif not is_freight and closest_ghost_dist <= 150 and not is_dead:
@@ -95,8 +95,8 @@ class Player:
         # punish pacman for losing lives
         if (not self.isDead) and is_dead:
             reward = -150
-            print("isdead" + str(is_dead))
-            print("reward" + str(reward))
+            # print("isdead" + str(is_dead))
+            # print("reward" + str(reward))
             self.isDead = False
         if is_dead:
             self.isDead = True
